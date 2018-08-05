@@ -27,6 +27,7 @@ cd angularLibro
 
 Subir servicio desarrollo 
 ```sh
+npm install
 ng serve
 ```
 
