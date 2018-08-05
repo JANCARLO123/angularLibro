@@ -1,0 +1,26 @@
+<div class="card">
+<div class="card-body">
+<table  class="table table-hover">
+  <thead>
+  <tr>
+      <td>Libro</td>
+      <td>Autor</td>
+      <td>Paginas</td>
+      <td>Editorial</td>
+      <td colspan="1"></td>
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let libro of libros">
+          <td>{{ libro.nombre }}</td>
+          <td>{{ libro.autor }}</td>
+          <td>{{ libro.paginas }}</td>
+          <td>{{ libro.editorial }}</td>
+          <td><a [routerLink]="['/editar', libro.id]" class="btn btn-primary">Editar</a>
+          <button (click)="deleteLibro(libro.id)" class="btn btn-danger">X</button></td>
+      </tr>  
+  </tbody>
+</table>
+    </div>
+</div>
